@@ -16,6 +16,16 @@ import { BentoGrid } from '@/layouts/BentoGrid';
 import { Documentation } from '@/layouts/Documentation';
 import { ChatApp } from '@/layouts/ChatApp';
 import { Ecommerce } from '@/layouts/Ecommerce';
+import { VideoStreaming } from '@/layouts/VideoStreaming';
+import { MusicPlayer } from '@/layouts/MusicPlayer';
+import { EmailClient } from '@/layouts/EmailClient';
+import { ProjectManagement } from '@/layouts/ProjectManagement';
+import { AnalyticsDashboard } from '@/layouts/AnalyticsDashboard';
+import { CalendarApp } from '@/layouts/CalendarApp';
+import { FileStorage } from '@/layouts/FileStorage';
+import { LearningManagement } from '@/layouts/LearningManagement';
+import { SearchResults } from '@/layouts/SearchResults';
+import { BookingPlatform } from '@/layouts/BookingPlatform';
 import { LayoutSwitcher } from '@/components/LayoutSwitcher';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
@@ -59,6 +69,26 @@ function LayoutManager() {
         return <ChatApp />;
       case 'ecommerce':
         return <Ecommerce />;
+      case 'video-streaming':
+        return <VideoStreaming />;
+      case 'music-player':
+        return <MusicPlayer />;
+      case 'email-client':
+        return <EmailClient />;
+      case 'project-management':
+        return <ProjectManagement />;
+      case 'analytics-dashboard':
+        return <AnalyticsDashboard />;
+      case 'calendar-app':
+        return <CalendarApp />;
+      case 'file-storage':
+        return <FileStorage />;
+      case 'learning-management':
+        return <LearningManagement />;
+      case 'search-results':
+        return <SearchResults />;
+      case 'booking-platform':
+        return <BookingPlatform />;
       default:
         return <OSWrapper />;
     }

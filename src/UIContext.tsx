@@ -20,7 +20,17 @@ const LAYOUTS: LayoutType[] = [
   'bento-grid',
   'documentation',
   'chat-app',
-  'ecommerce'
+  'ecommerce',
+  'video-streaming',
+  'music-player',
+  'email-client',
+  'project-management',
+  'analytics-dashboard',
+  'calendar-app',
+  'file-storage',
+  'learning-management',
+  'search-results',
+  'booking-platform'
 ];
 
 export function UIProvider({ children }: { children: ReactNode }) {

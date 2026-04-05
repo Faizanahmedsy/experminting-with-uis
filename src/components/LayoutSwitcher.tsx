@@ -22,7 +22,17 @@ export function LayoutSwitcher() {
     'bento-grid': 'Bento Grid (Portfolio)',
     'documentation': 'Documentation (Starlight)',
     'chat-app': 'Chat App (Discord)',
-    'ecommerce': 'E-commerce (Storefront)'
+    'ecommerce': 'E-commerce (Storefront)',
+    'video-streaming': 'Video Streaming (YouTube)',
+    'music-player': 'Music Player (Spotify)',
+    'email-client': 'Email Client (Gmail)',
+    'project-management': 'Project Management (Gantt)',
+    'analytics-dashboard': 'Analytics (Chart-heavy)',
+    'calendar-app': 'Calendar (Scheduling)',
+    'file-storage': 'File Storage (Cloud Drive)',
+    'learning-management': 'LMS (Courseware)',
+    'search-results': 'Search Engine (Results)',
+    'booking-platform': 'Booking (Travel)'
   };
 
   return (
