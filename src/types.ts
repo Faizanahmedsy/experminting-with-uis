@@ -18,7 +18,11 @@ export type LayoutType =
   | 'file-storage'
   | 'learning-management'
   | 'search-results'
-  | 'booking-platform';
+  | 'booking-platform'
+  | 'admin-finder-ui'
+  | 'admin-teacher-dashboard';
+
+export type Category = 'inspiration' | 'admin-implementation';
 
 export type AppId = 'terminal' | 'notepad' | 'gemini' | 'settings' | 'explorer';
 

@@ -26,6 +26,8 @@ import { FileStorage } from '@/layouts/FileStorage';
 import { LearningManagement } from '@/layouts/LearningManagement';
 import { SearchResults } from '@/layouts/SearchResults';
 import { BookingPlatform } from '@/layouts/BookingPlatform';
+import { AdminFinderUI } from '@/layouts/AdminFinderUI';
+import { AdminTeacherDashboard } from '@/layouts/AdminTeacherDashboard';
 import { LayoutSwitcher } from '@/components/LayoutSwitcher';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
@@ -89,6 +91,10 @@ function LayoutManager() {
         return <SearchResults />;
       case 'booking-platform':
         return <BookingPlatform />;
+      case 'admin-finder-ui':
+        return <AdminFinderUI />;
+      case 'admin-teacher-dashboard':
+        return <AdminTeacherDashboard />;
       default:
         return <OSWrapper />;
     }

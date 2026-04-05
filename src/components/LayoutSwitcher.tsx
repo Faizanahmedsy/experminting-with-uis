@@ -1,5 +1,5 @@
 import { useUI } from '@/UIContext';
-import { ChevronLeft, ChevronRight, Layout } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Layout, Sparkles, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'motion/react';
 import {
@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export function LayoutSwitcher() {
-  const { currentLayout, setLayout, nextLayout, prevLayout } = useUI();
+  const { currentLayout, currentCategory, setLayout, setCategory, nextLayout, prevLayout } = useUI();
 
   const layoutNames: Record<string, string> = {
     'nebula-os': 'Nebula OS (Desktop)',
@@ -32,8 +32,24 @@ export function LayoutSwitcher() {
     'file-storage': 'File Storage (Cloud Drive)',
     'learning-management': 'LMS (Courseware)',
     'search-results': 'Search Engine (Results)',
-    'booking-platform': 'Booking (Travel)'
+    'booking-platform': 'Booking (Travel)',
+    'admin-finder-ui': 'Admin Finder (Sanity Style)',
+    'admin-teacher-dashboard': 'Teacher Dashboard (LeetCode Style)'
   };
+
+  const inspirationLayouts = [
+    'nebula-os', 'resizable-ide', 'miller-columns', 'admin-dashboard', 'kanban-board',
+    'social-feed', 'bento-grid', 'documentation', 'chat-app', 'ecommerce',
+    'video-streaming', 'music-player', 'email-client', 'project-management',
+    'analytics-dashboard', 'calendar-app', 'file-storage', 'learning-management',
+    'search-results', 'booking-platform'
+  ];
+
+  const adminLayouts = [
+    'admin-finder-ui', 'admin-teacher-dashboard'
+  ];
+
+  const currentLayouts = currentCategory === 'inspiration' ? inspirationLayouts : adminLayouts;
 
   return (
     <motion.div 
@@ -41,6 +57,28 @@ export function LayoutSwitcher() {
       animate={{ y: 0 }}
       className="fixed bottom-16 left-1/2 -translate-x-1/2 z-[10000] flex items-center gap-2 bg-background/80 backdrop-blur-xl border p-2 rounded-full shadow-2xl"
     >
+      {/* Category Toggle */}
+      <div className="flex bg-muted p-1 rounded-full mr-2">
+        <Button 
+          variant={currentCategory === 'inspiration' ? 'default' : 'ghost'} 
+          size="sm" 
+          onClick={() => setCategory('inspiration')}
+          className="rounded-full h-8 px-4 gap-2 text-xs font-bold"
+        >
+          <Sparkles className="h-3 w-3" />
+          Inspiration
+        </Button>
+        <Button 
+          variant={currentCategory === 'admin-implementation' ? 'default' : 'ghost'} 
+          size="sm" 
+          onClick={() => setCategory('admin-implementation')}
+          className="rounded-full h-8 px-4 gap-2 text-xs font-bold"
+        >
+          <Shield className="h-3 w-3" />
+          Admin
+        </Button>
+      </div>
+
       <Button variant="ghost" size="icon" onClick={prevLayout} className="rounded-full">
         <ChevronLeft className="h-4 w-4" />
       </Button>
@@ -52,14 +90,14 @@ export function LayoutSwitcher() {
             <span className="text-sm font-medium">{layoutNames[currentLayout]}</span>
           </div>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="center" className="w-56">
-          {Object.entries(layoutNames).map(([id, name]) => (
+        <DropdownMenuContent align="center" className="w-64 max-h-[400px] overflow-y-auto">
+          {currentLayouts.map((id) => (
             <DropdownMenuItem 
               key={id} 
               onClick={() => setLayout(id as any)}
-              className={currentLayout === id ? "bg-primary/10 text-primary" : ""}
+              className={currentLayout === id ? "bg-primary/10 text-primary font-bold" : ""}
             >
-              {name}
+              {layoutNames[id]}
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
