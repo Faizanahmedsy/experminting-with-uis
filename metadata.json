@@ -1,0 +1,5 @@
+{
+  "name": "NebulaOS",
+  "description": "A fully functional desktop operating system experience in your browser, featuring window management, a taskbar, and built-in apps.",
+  "requestFramePermissions": []
+}
