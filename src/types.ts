@@ -20,7 +20,17 @@ export type LayoutType =
   | 'search-results'
   | 'booking-platform'
   | 'admin-finder-ui'
-  | 'admin-teacher-dashboard';
+  | 'admin-teacher-dashboard'
+  | 'admin-kanban-crm'
+  | 'admin-bento-summary'
+  | 'admin-support-chat'
+  | 'admin-video-moderation'
+  | 'admin-inventory-table'
+  | 'admin-campaign-manager'
+  | 'admin-project-tracker'
+  | 'admin-performance-monitor'
+  | 'admin-asset-manager'
+  | 'admin-booking-manager';
 
 export type Category = 'inspiration' | 'admin-implementation';
 

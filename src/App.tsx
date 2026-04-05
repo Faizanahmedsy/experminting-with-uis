@@ -28,6 +28,16 @@ import { SearchResults } from '@/layouts/SearchResults';
 import { BookingPlatform } from '@/layouts/BookingPlatform';
 import { AdminFinderUI } from '@/layouts/AdminFinderUI';
 import { AdminTeacherDashboard } from '@/layouts/AdminTeacherDashboard';
+import { AdminKanbanCRM } from '@/layouts/AdminKanbanCRM';
+import { AdminBentoSummary } from '@/layouts/AdminBentoSummary';
+import { AdminSupportChat } from '@/layouts/AdminSupportChat';
+import { AdminVideoModeration } from '@/layouts/AdminVideoModeration';
+import { AdminInventoryTable } from '@/layouts/AdminInventoryTable';
+import { AdminCampaignManager } from '@/layouts/AdminCampaignManager';
+import { AdminProjectTracker } from '@/layouts/AdminProjectTracker';
+import { AdminPerformanceMonitor } from '@/layouts/AdminPerformanceMonitor';
+import { AdminAssetManager } from '@/layouts/AdminAssetManager';
+import { AdminBookingManager } from '@/layouts/AdminBookingManager';
 import { LayoutSwitcher } from '@/components/LayoutSwitcher';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
@@ -95,6 +105,26 @@ function LayoutManager() {
         return <AdminFinderUI />;
       case 'admin-teacher-dashboard':
         return <AdminTeacherDashboard />;
+      case 'admin-kanban-crm':
+        return <AdminKanbanCRM />;
+      case 'admin-bento-summary':
+        return <AdminBentoSummary />;
+      case 'admin-support-chat':
+        return <AdminSupportChat />;
+      case 'admin-video-moderation':
+        return <AdminVideoModeration />;
+      case 'admin-inventory-table':
+        return <AdminInventoryTable />;
+      case 'admin-campaign-manager':
+        return <AdminCampaignManager />;
+      case 'admin-project-tracker':
+        return <AdminProjectTracker />;
+      case 'admin-performance-monitor':
+        return <AdminPerformanceMonitor />;
+      case 'admin-asset-manager':
+        return <AdminAssetManager />;
+      case 'admin-booking-manager':
+        return <AdminBookingManager />;
       default:
         return <OSWrapper />;
     }

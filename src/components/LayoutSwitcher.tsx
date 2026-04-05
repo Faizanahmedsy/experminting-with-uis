@@ -34,7 +34,17 @@ export function LayoutSwitcher() {
     'search-results': 'Search Engine (Results)',
     'booking-platform': 'Booking (Travel)',
     'admin-finder-ui': 'Admin Finder (Sanity Style)',
-    'admin-teacher-dashboard': 'Teacher Dashboard (LeetCode Style)'
+    'admin-teacher-dashboard': 'Teacher Dashboard (LeetCode Style)',
+    'admin-kanban-crm': 'Sales CRM (Kanban Style)',
+    'admin-bento-summary': 'Executive Summary (Bento Style)',
+    'admin-support-chat': 'Support Hub (Zendesk Style)',
+    'admin-video-moderation': 'Video Mod (YouTube Style)',
+    'admin-inventory-table': 'Inventory (Airtable Style)',
+    'admin-campaign-manager': 'Campaigns (Mailchimp Style)',
+    'admin-project-tracker': 'Project Tracker (Asana Style)',
+    'admin-performance-monitor': 'Ops Monitor (AWS Style)',
+    'admin-asset-manager': 'Asset Manager (Adobe Style)',
+    'admin-booking-manager': 'Booking Manager (Airbnb Style)'
   };
 
   const inspirationLayouts = [
@@ -46,7 +56,18 @@ export function LayoutSwitcher() {
   ];
 
   const adminLayouts = [
-    'admin-finder-ui', 'admin-teacher-dashboard'
+    'admin-finder-ui', 
+    'admin-teacher-dashboard',
+    'admin-kanban-crm',
+    'admin-bento-summary',
+    'admin-support-chat',
+    'admin-video-moderation',
+    'admin-inventory-table',
+    'admin-campaign-manager',
+    'admin-project-tracker',
+    'admin-performance-monitor',
+    'admin-asset-manager',
+    'admin-booking-manager'
   ];
 
   const currentLayouts = currentCategory === 'inspiration' ? inspirationLayouts : adminLayouts;
